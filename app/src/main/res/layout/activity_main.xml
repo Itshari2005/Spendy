@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/backgroundColor">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expense Tracker"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/textPrimary"
+        android:layout_gravity="center"
+        android:paddingBottom="12dp"/>
+
+    <!-- Expense Input Box -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_box"
+        android:padding="10dp"
+        android:elevation="4dp"
+        android:layout_marginBottom="12dp">
+
+        <EditText
+            android:id="@+id/editAmount"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Enter amount"
+            android:textSize="16sp"
+            android:textColorHint="@color/textHint"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:background="@null"/>
+
+        <EditText
+            android:id="@+id/editDescription"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Enter description"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/textHint"
+            android:padding="16dp"
+            android:background="@null"/>
+    </LinearLayout>
+
+    <!-- Add Button -->
+    <Button
+        android:id="@+id/buttonAddExpense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="➕ Add Expense"
+        android:backgroundTint="@color/primaryColor"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center"/>
+
+    <!-- Expense List Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recent Expenses"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/textPrimary"
+        android:paddingBottom="8dp"/>
+
+    <!-- Total Expense TextView -->
+    <TextView
+        android:id="@+id/textTotalExpense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total: ₹0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryColor"
+        android:padding="12dp"
+        android:background="@drawable/rounded_box"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+
+    <!-- Expense List -->
+    <ListView
+        android:id="@+id/listViewExpenses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:background="@drawable/rounded_list_bg"
+        android:padding="8dp"/>
+</LinearLayout>
